@@ -1,4 +1,4 @@
-﻿<mahapps:MetroWindow x:Class="RapidModernUI.Sample.MainView"
+﻿<mahapps:MetroWindow x:Class="RapidModernUI.Sample.ShellView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mahapps="http://metro.mahapps.com/winfx/xaml/controls"

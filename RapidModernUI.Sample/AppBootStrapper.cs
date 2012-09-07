@@ -1,10 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Windows.Threading;
 using Caliburn.Micro;
+using RapidModernUI.Sample.ViewModels;
+using RapidModernUI.Sample.Views;
 
 namespace RapidModernUI.Sample
 {
-    public class AppBootstrapper : Bootstrapper<MainViewModel>
+    public class AppBootstrapper : Bootstrapper<ShellViewModel>
     {
         private SimpleContainer _container;
 
@@ -18,18 +20,22 @@ namespace RapidModernUI.Sample
             _container.Singleton<IEventAggregator, EventAggregator>();
 
             //CM doesn't include code for instantiating concrete types automatically yet(1.3.1).
-            _container.PerRequest<MainViewModel>();
-            _container.PerRequest<MainView>();
+            _container.PerRequest<ShellViewModel>();
+            _container.PerRequest<ShellView>();
+            _container.PerRequest<Page1View>();
+            _container.PerRequest<Page1ViewModel>();
+            _container.PerRequest<Page2View>();
+            _container.PerRequest<Page2ViewModel>();
         }
 
-        protected override void OnUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             base.OnUnhandledException(sender, e);
             BreakOnDebug(sender, e);
         }
 
         [Conditional("DEBUG")]
-        private void BreakOnDebug(object sender, DispatcherUnhandledExceptionEventArgs dispatcherUnhandledExceptionEventArgs)
+        private void BreakOnDebug(object sender, DispatcherUnhandledExceptionEventArgs args)
         {
             if (Debugger.IsAttached)
             {
