@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>RapidModernUI</id>
+    <version>0.0.1.0</version>
+    <title>RapidModernUI</title>
+    <authors>csmacnz</authors>
+    <owners>csmacnz</owners>
+    <projectUrl>https://github.com/csmacnz/RapidModernUI</projectUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Rapid "file->new project" bootstrapper for WPF modern-UI style applications.</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="Caliburn.Micro" version="1.3.1" />
+      <dependency id="Caliburn.Micro.Container" version="1.3.1" />
+      <dependency id="MahApps.Metro" version="0.9.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\**" target="lib" />
+    <file src="tools\**" target="tools" />
+    <file src="content\**" target="content" />
+  </files>
+</package>
